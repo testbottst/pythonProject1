@@ -1,6 +1,16 @@
 import constants as keys
 from telegram.ext import *
 import responses as r
+import logging
+import os
+PORT = int(os.environ.get('PORT', 5000))
+
+# Enable logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+TOKEN = 'keys'
 
 print("הבוט פעיל")
 
@@ -46,8 +56,12 @@ def main():
 
 
     # Run the bot
-    updater.start_polling()
     updater.idle()
+    # Start the Bot
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=TOKEN)
+    updater.bot.setWebhook('https://intense-escarpment-48006.herokuapp.com/' + TOKEN)
 
 
 main()
