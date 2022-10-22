@@ -57,7 +57,7 @@ def main():
     # Start the Bot
     updater.start_polling()
     updater.start_webhook(listen="0.0.0.0", port=int(PORT), url_path='TOKEN',
-                          webhook_url='https://intense-escarpment-48006.herokuapp.com/' + TOKEN)
+                          webhook_url='https://wedobott.herokuapp.com/' + TOKEN)
     # listen="0.0.0.0",
     # port=int(PORT),
     # url_path=TOKEN,
