@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-TOKEN = '5528812526:AAEJ715Dc_9Q9ztvZ8tJUX-2xFhhB7IuiJs'
+TOKEN = '5528812526:AAHEeAyBrrou8WDpzvAUFfnXs6BWr4itN_w'
 
 
 # Define a few command handlers. These usually take the two arguments update and
@@ -57,7 +57,7 @@ def main():
     # Start the Bot
     updater.start_polling()
     updater.start_webhook(
-        listen="0.0.0.0",
+        listen="127.0.0.1",
         port=int(PORT),
         url_path=TOKEN,
         webhook_url='https://wedobott.herokuapp.com/' + TOKEN)
