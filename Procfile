@@ -1,1 +1,1 @@
-web:python3 bot.py 8443
+web: python3 bot.py 8443
