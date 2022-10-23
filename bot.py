@@ -60,10 +60,10 @@ def main():
 
     # Start the Bot
     updater.start_webhook(
-        listen='localhost',
+        listen='127.0.0.1',
         port=PORT,
         url_path=TOKEN,
-        webhook_url="https://wedobott.herokuapp.com/" + TOKEN
+        webhook_url="https://wedobott.herokuapp.com/:8443" + TOKEN
     )
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
