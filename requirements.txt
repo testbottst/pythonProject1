@@ -1,4 +1,4 @@
-python-telegram-bot==12.7
+python-telegram-bot==13.14
 
 responses~=0.22.0
 telegram~=0.0.1
