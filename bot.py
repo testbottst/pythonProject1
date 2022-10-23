@@ -16,12 +16,16 @@ TOKEN = '5528812526:AAHEeAyBrrou8WDpzvAUFfnXs6BWr4itN_w'
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi!')
+    update.message.reply_text('יש לבחור בהזמנה או תפריט באמצעות שליחת הודעה ״הזמנה״ או ״תפריט״')
 
 
 def help(update, context):
     """Send a message when the command /help is issued."""
     update.message.reply_text('Help!')
+
+    def menu(update, context):
+        """Send a message when the command /help is issued."""
+        update.message.reply_text('לחיצה על קישור תוביל אל התפריט קישור : ')
 
 
 def echo(update, context):
