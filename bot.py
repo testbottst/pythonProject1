@@ -60,7 +60,7 @@ def main():
 
     # Start the Bot
     updater.start_webhook(
-        listen="127.0.0.1",
+        listen="0.0.0.0",
         port=int(PORT),
         url_path=TOKEN,
         webhook_url='https://wedobott.herokuapp.com/'+TOKEN)
